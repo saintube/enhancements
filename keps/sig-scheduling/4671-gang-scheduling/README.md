@@ -293,13 +293,13 @@ spec:
 
 ```
 
-We decided for this option because it is more succint and makes the role of a pod clear just
+We decided for this option because it is more succinct and makes the role of a pod clear just
 from inspecting the pod (and simple/efficient to group).
 We acknowledge the fact that this option may require additional minor changes in the controllers
 to adopt this pattern (e.g. for LeaderWorkerSet we will need to populate the pod template
 similarly that we currently populate the labels).
 
-The primary alternative we consider was to introduce the the `PodGroupSelector` on each `PodGroup`
+The primary alternative we consider was to introduce the `PodGroupSelector` on each `PodGroup`
 to identify pods belonging to it. However, with this pattern:
 - there are additional corner cases (e.g. a pod links to a workload but none of its PodGroups matching
   that pod)
