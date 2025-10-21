@@ -281,8 +281,7 @@ spec:
 ```yaml
 apiVersion: v1
 kind: Pod
-name:
-  jobset-job-1-abc123
+name: jobset-job-1-abc123
 spec:
   ...
   workload:
